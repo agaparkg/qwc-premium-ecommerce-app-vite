@@ -8,7 +8,7 @@ import {
   Row,
 } from "reactstrap";
 import tv from "../assets/tv.jpeg";
-import vacuum from "../assets/vacuum.jpeg";
+import vacuum from "../assets/vacuum.avif";
 import washer from "../assets/washer.jpeg";
 
 const Home = () => {
@@ -55,7 +55,7 @@ const Home = () => {
           <Card>
             <CardBody>
               <img
-                height={237}
+                height={282}
                 src={vacuum}
                 alt="Vacuum Cleaner"
                 className="card-img-top"
