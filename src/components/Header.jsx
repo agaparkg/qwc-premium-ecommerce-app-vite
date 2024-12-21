@@ -1,9 +1,12 @@
 import { ImEnter } from "react-icons/im";
 import { IoPersonOutline } from "react-icons/io5";
+import { useLocation } from "react-router-dom";
 import { Nav, Navbar, NavbarBrand, NavItem, NavLink } from "reactstrap";
 import logo from "../assets/logo.svg";
 
 const Header = () => {
+  const { pathname } = useLocation();
+
   return (
     <Navbar color="dark" dark>
       <NavbarBrand href="/">
@@ -19,22 +22,38 @@ const Header = () => {
         QWC Premium
       </NavbarBrand>
       <Nav>
-        <NavItem>
+        <NavItem
+          className={`${
+            pathname === "/" && "border-3 border-bottom border-primary"
+          }`}
+        >
           <NavLink className="text-light" href="/">
             HOME
           </NavLink>
         </NavItem>
-        <NavItem>
+        <NavItem
+          className={`${
+            pathname === "/about" && "border-3 border-bottom border-primary"
+          }`}
+        >
           <NavLink className="text-light" href="/about">
             ABOUT
           </NavLink>
         </NavItem>
-        <NavItem>
+        <NavItem
+          className={`${
+            pathname === "/contact" && "border-3 border-bottom border-primary"
+          }`}
+        >
           <NavLink className="text-light" href="/contact">
             CONTACT
           </NavLink>
         </NavItem>
-        <NavItem>
+        <NavItem
+          className={`${
+            pathname === "/dashboard" && "border-3 border-bottom border-primary"
+          }`}
+        >
           <NavLink className="text-light" href="/dashboard">
             DASHBOARD
           </NavLink>
